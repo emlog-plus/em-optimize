@@ -13,7 +13,10 @@ Author URL: https://crazyus.us
 
 function db_menu()
 {
-echo '<li><a href="./plugin.php?plugin=em-optimize-master" id="optimizedb">数据库优化</a></li>';
+/*Load the language*/
+require_once(EMLOG_ROOT . "/content/plugins/em-optimize-master/lang/".Option::get('language').".php");
+/*end*/
+echo '<li><a href="./plugin.php?plugin=em-optimize-master" id="optimizedb">'.$_lang['optimize'].'</a></li>';
 }
 addAction('adm_sidebar_ext', 'db_menu');
 ?>
